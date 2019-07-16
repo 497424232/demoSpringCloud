@@ -17,6 +17,8 @@
         <module name="nativeconfigserver" />
         <module name="resttemplate" />
         <module name="ribbon" />
+        <module name="zipkinclient" />
+        <module name="zipkinserver" />
         <module name="zuul" />
       </profile>
     </annotationProcessing>

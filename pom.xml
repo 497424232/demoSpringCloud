@@ -23,6 +23,13 @@
         <module>configclient</module>
         <module>zipkinserver</module>
         <module>zipkinclient</module>
+        <module>springcloud-api</module>
+        <module>springcloud-productor</module>
+        <module>springcloud-consumer</module>
+        <module>springcloud-eurekaServer</module>
+        <module>springcloud-eurekaServer-8762</module>
+        <module>springcloud-eurekaServer-8763</module>
+        <module>springcloud-feign</module>
     </modules>
 
     <parent>
@@ -58,5 +65,26 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <finalName>demoSpringCloud</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <delimiters>
+                        <delimiter>$</delimiter>
+                    </delimiters>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

@@ -1,0 +1,18 @@
+
+server:
+  port: 8763
+eureka:
+  client:
+    register-with-eureka: false   #不向注册中心注册自己
+    fetch-registry: false         #表示自己就是注册中心
+    #注册中心访问地址
+    service-url:
+#      defaultZone: http://localhost:8763/euruka/
+      #设置注册中心的地址
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/euruka/
+    #修改为集群模式时，修改地址
+      defaultZone: http://eureka8761.com:8761/euruka/,http://eureka8762.com:8762/euruka/
+  instance:
+#    hostname: localhost
+    #修改为集群是修改地址名称
+    hostname: eureka8763.com
